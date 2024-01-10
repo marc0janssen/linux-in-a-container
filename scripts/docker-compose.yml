@@ -1,0 +1,16 @@
+version: "2.1"
+services:
+    ubuntu:
+        image: marc0janssen/linux-in-a-container:latest
+        container_name: linux-in-a-container
+#        labels:
+#            - com.centurylinklabs.watchtower.enable=False
+#        environment:
+
+        volumes:
+            - /dev/shm:/dev/shm
+        ports:
+            - 1922:22
+        restart: unless-stopped
+        network_mode: bridge
+        
