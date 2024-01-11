@@ -5,11 +5,12 @@ services:
         container_name: linux-in-a-container
 #        labels:
 #            - com.centurylinklabs.watchtower.enable=False
-#        environment:
+        environment:
+            - ROOT_PWD=SOME_STRONG_PASSWORD
 
         volumes:
             - /dev/shm:/dev/shm
         ports:
-            - 1922:22
+            - "1922:22"
         restart: unless-stopped
         network_mode: bridge
