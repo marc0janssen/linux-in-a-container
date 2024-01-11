@@ -10,7 +10,7 @@ NOW=$(date +"%d-%m-%Y %H:%M")
 ssh-keygen -A
 
 mkdir /var/run/sshd
-echo 'root:PASSWORD' | chpasswd
+echo 'root:${ROOT_PWD}' | chpasswd
 sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 #RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pecho "${NOW} - *** Starting the crond process"

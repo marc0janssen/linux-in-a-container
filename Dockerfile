@@ -13,6 +13,8 @@ RUN apk update && apk upgrade --available && \
 
 EXPOSE 22
 
+ENV ROOT_PWD=PASSWORD
 ENV TZ=Europe/Amsterdam
+
 
 ENTRYPOINT ["/app/start.sh"]
