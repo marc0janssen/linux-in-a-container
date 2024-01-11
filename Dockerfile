@@ -1,6 +1,6 @@
 FROM alpine:3.18.5
 
-RUN apk update && apk upgrade -y && apk add -y openssh-server
+RUN apk update && apk upgrade && apk add openssh-server
 
 RUN mkdir /var/run/sshd
 
