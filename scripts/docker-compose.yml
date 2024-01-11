@@ -1,6 +1,6 @@
 version: "2.1"
 services:
-    ubuntu:
+    liac:
         image: marc0janssen/linux-in-a-container:latest
         container_name: linux-in-a-container
 #        labels:
@@ -13,4 +13,3 @@ services:
             - 1922:22
         restart: unless-stopped
         network_mode: bridge
-        

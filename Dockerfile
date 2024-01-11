@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:3.18.5
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y openssh-server
+RUN apk update && apk upgrade -y && apk add -y openssh-server
 
 RUN mkdir /var/run/sshd
 
